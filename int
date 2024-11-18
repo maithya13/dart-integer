@@ -1,0 +1,34 @@
+void main() {
+  // Define a list of integers
+  List<int> numbers = [5, 12, 8, 150, 3, 72, 42, 200];
+
+  // Iterate through the list using a for loop
+  for (int num in numbers) {
+    // Print each number
+    print('Number: $num');
+
+    // Check if the number is even or odd using if-else
+    if (num % 2 == 0) {
+      print('$num is even.');
+    } else {
+      print('$num is odd.');
+    }
+
+    // Categorize the number as "small", "medium", or "large" using a switch statement
+    String category;
+    switch (num) {
+      case var n when (n >= 1 && n <= 10):
+        category = 'small';
+        break;
+      case var n when (n >= 11 && n <= 100):
+        category = 'medium';
+        break;
+      case var n when (n >= 101):
+        category = 'large';
+        break;
+      default:
+        category = 'undefined';
+    }
+    print('$num is categorized as $category.\n');
+  }
+}
